@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "c6661451-e360-42bb-b55e-e5706eb90c5a",
+		"name": "mindex interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "brendan",
+			"item": [
+				{
+					"name": "brendan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"brendan_id\", jsonData.employeeId);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"1\",\r\n    \"firstName\": \"brendan\",\r\n    \"lastName\": \"robert\",\r\n    \"position\": \"software dev\",\r\n    \"department\": \"tech\",\r\n    \"directReports\": [\r\n        {\r\n            \"employeeId\": \"2\",\r\n            \"firstName\": \"john\",\r\n            \"lastName\": \"doe\",\r\n            \"position\": \"software dev\",\r\n            \"department\": \"tech\",\r\n            \"directReports\": []\r\n        },\r\n        {\r\n            \"employeeId\": \"3\",\r\n            \"firstName\": \"joehn\",\r\n            \"lastName\": \"doee\",\r\n            \"position\": \"software dev\",\r\n            \"department\": \"tech\",\r\n            \"directReports\": []\r\n        },\r\n          {\r\n            \"employeeId\": \"4\",\r\n            \"firstName\": \"mary\",\r\n            \"lastName\": \"jane\",\r\n            \"position\": \"software dev\",\r\n            \"department\": \"tech\",\r\n            \"directReports\": [\r\n                  {\r\n                    \"employeeId\": \"5\",\r\n                    \"firstName\": \"silva\",\r\n                    \"lastName\": \"smith\",\r\n                    \"position\": \"software dev\",\r\n                    \"department\": \"tech\",\r\n                    \"directReports\": [\r\n                         {\r\n                            \"employeeId\": \"6\",\r\n                            \"firstName\": \"jim\",\r\n                            \"lastName\": \"sss\",\r\n                            \"position\": \"software dev\",\r\n                            \"department\": \"tech\",\r\n                            \"directReports\": []\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reporting structure brendan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/{{brendan_id}}/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"{{brendan_id}}",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "steve",
+			"item": [
+				{
+					"name": "steve",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"steve_id\", jsonData.employeeId);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"12334\",\r\n    \"firstName\": \"brendan\",\r\n    \"lastName\": \"robert\",\r\n    \"position\": \"software dev\",\r\n    \"department\": \"tech\",\r\n    \"directReports\": [\r\n       \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reporting structure steve",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/{{steve_id}}/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"{{steve_id}}",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "john",
+			"item": [
+				{
+					"name": "john",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"john_id\", jsonData.employeeId);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"12334\",\r\n    \"firstName\": \"brendan\",\r\n    \"lastName\": \"robert\",\r\n    \"position\": \"software dev\",\r\n    \"department\": \"tech\",\r\n    \"directReports\": [\r\n       {\r\n            \"employeeId\": \"12334\",\r\n            \"firstName\": \"john\",\r\n            \"lastName\": \"doe\",\r\n            \"position\": \"software dev\",\r\n            \"department\": \"tech\",\r\n            \"directReports\": [\r\n\r\n            ]\r\n       }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/employee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reporting structure john",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/{{john_id}}/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"{{john_id}}",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get employee brendan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employee/{{brendan_id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"{{brendan_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Compensation brendan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\": \"{{brendan_id}}\",\r\n    \"salary\": \"100.0\",\r\n    \"effectiveDate\": \"2020-02-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/employee/compensation",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"compensation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Compensation brendan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\": \"{{brendan_id}}\",\r\n    \"salary\": \"100.0\",\r\n    \"effectiveDate\": \"2020-02-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/employee/{{brendan_id}}/compensation",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"{{brendan_id}}",
+						"compensation"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "brendan_id",
+			"value": ""
+		},
+		{
+			"key": "john_id",
+			"value": ""
+		},
+		{
+			"key": "steve_id",
+			"value": ""
+		}
+	]
+}
